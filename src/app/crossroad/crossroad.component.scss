@@ -1,0 +1,12 @@
+.traffic-light-container {
+    display:flex;
+    min-height: 90vh;
+    align-items: center;
+    justify-content: space-around;
+}
+.horizontal {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: stretch;
+}
