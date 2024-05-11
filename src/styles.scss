@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+* {
+    font-family:cursive,sans-serif;
+}
 .container {
     width:65rem;
     max-width: calc(100% - 2rem);
     margin-inline: auto;
+    margin-block-start:1rem;
 }

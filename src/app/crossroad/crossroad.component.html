@@ -1,10 +1,20 @@
 <div class="traffic-light-container">
-    <app-traffic-light direction="vertical" activeLight="red"></app-traffic-light>
+
+    <app-traffic-light direction="vertical" startLight="red" [emergencyMode]="emergency"></app-traffic-light>
+
     <div class="horizontal">
-        <app-traffic-light direction="horizontal" activeLight="green"></app-traffic-light>
-        <app-traffic-light direction="horizontal" activeLight="green"></app-traffic-light>
+        <app-traffic-light direction="horizontal" startLight="green" [emergencyMode]="emergency"></app-traffic-light>
+        <button
+            emergency
+            [disabled]="inCooldown"
+            [class]="emergency ? 'off' : '' " 
+            (click)="activateEmergency()"
+        >Авария</button>
+        <app-traffic-light direction="horizontal" startLight="green" [emergencyMode]="emergency"></app-traffic-light>
     </div>
-    <app-traffic-light direction="vertical" activeLight="red"></app-traffic-light>
+
+    <app-traffic-light direction="vertical" startLight="red" [emergencyMode]="emergency"></app-traffic-light>
+    
 </div>
 
 

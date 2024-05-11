@@ -10,3 +10,18 @@
     justify-content: space-between;
     align-self: stretch;
 }
+
+button[emergency] {
+    background:linear-gradient(red,darkred);
+    padding:1em;
+    font-size:1.7rem;
+    cursor: pointer;
+    transition: background 250ms ease-in-out;
+}
+button[emergency]:disabled {
+    background:grey;
+    cursor: auto;
+}
+.off {
+    pointer-events: none;
+}

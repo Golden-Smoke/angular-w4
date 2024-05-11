@@ -1,5 +1,9 @@
-<div [class]="'traffic-light ' + direction">
-    <div [class]="'tf-light red ' + isActiveLight('red')"></div>
-    <div [class]="'tf-light yellow ' + isActiveLight('yellow')"></div>
-    <div [class]="'tf-light green ' + isActiveLight('green')"></div>
+<div class="tf-container">
+    <div [class]="'traffic-light ' + direction">
+        <div [class]="'tf-light red ' + isActiveLight('red')"></div>
+        <div [class]="'tf-light yellow ' + isActiveLight('yellow')"></div>
+        <div [class]="'tf-light green ' + isActiveLight('green')"></div>
+    </div>
+    
+    <button class="cross-btn" (click)="crossing()" [disabled]="activeLight === 'red' || emergencyMode">Пресичане</button>
 </div>

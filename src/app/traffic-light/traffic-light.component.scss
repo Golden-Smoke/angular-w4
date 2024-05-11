@@ -1,3 +1,10 @@
+.tf-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+
 .traffic-light {
     background:#333;
     border-radius:15px;
@@ -25,6 +32,33 @@
     background:black;
 }
 
+.cross-btn {
+    display: inline-block;
+    background-color:orange;
+    font-family: inherit;
+    padding:.5em 1em;
+    font-size:1.2rem;
+    transition: background-color 250ms ease-in-out;
+    cursor: pointer;
+}
+.cross-btn:disabled {
+    background-color:grey;
+    cursor: auto;
+}
+// Light Change
+
 .tf-light.red.active { background:red; }
 .tf-light.yellow.active { background:yellow; }
 .tf-light.green.active { background:green; }
+
+.tf-light.red.emergency { background:black; }
+.tf-light.yellow.emergency {
+    animation: blinkAnim 1250ms ease-in-out infinite;
+    background:yellow; 
+}
+.tf-light.green.emergency { background:black; }
+
+@keyframes blinkAnim {
+    0%,50%,100% { background:black; }
+    25%,75% { background:yellow; }
+}
